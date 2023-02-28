@@ -780,8 +780,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 408px;
-  height: 584px;
+  width: 460px;
   border-radius: 4px;
   background-color: var(--modal);
 }
@@ -811,6 +810,9 @@ body {
 }
 
 /*---------------------------------------modal field------------------------------*/
+.form-field{display: block;
+  margin-bottom: 8px;}
+
 .modal-text {
   margin-bottom: 16px;
   text-align: center;
@@ -821,38 +823,41 @@ body {
   letter-spacing: 0.02em;
 }
 
-.form-field {
-  margin-bottom: 8px;
-}
-
 .form-label {
+  display: inline-block;
+  margin-bottom: 4px;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.33;
   color: var(--subtle-text);
-  margin-bottom: 4px;
   letter-spacing: 0.01em;
 }
 
-.input-wrap {
-  position: relative;
-}
 
-.form-input {
-  padding: 0;
+ .form-input {
+  padding-left: 35px;
   width: 100%;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   background-color: transparent;
+  outline: transparent;
+
+}
+ .form-input:focus{
+  border-color: 1px  var(--hover-focus);
+  border-radius: 4px;
+}
+
+.input-wrap {
+  display: block;
+  position: relative;
 }
 
 .icon-person {
   position: absolute;
-  width: 18px;
-  height: 18px;
   left: 16px;
   top: 50%;
   transform: translateY(-50%);
@@ -860,8 +865,6 @@ body {
 
 .icon-contact {
   position: absolute;
-  width: 18px;
-  height: 24px;
   left: 16px;
   top: 50%;
   transform: translateY(-50%);
@@ -882,7 +885,7 @@ textarea::placeholder {
 }
 
 .form-area {
-  padding: 8px 16px;
+
 
   font-family: "Roboto";
   font-style: normal;
@@ -910,6 +913,38 @@ textarea::placeholder {
   line-height: 1.33;
   letter-spacing: 0.01em;
   color: var(--subtle-text);
+}
+
+.check-input{
+  margin: 0;
+  width: 16px;
+  height: 16px;
+  border: 1.25px solid  rgba(46, 47, 66, 1);
+border-radius: 4px;
+
+}
+
+.btn-mode-header{
+  width: 169px;
+  height: 56px;
+  margin-top: 24px;
+  color: var(--modal);
+  background: var(--btn);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+border-radius: 4px;
+border: none;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 1.33;
+letter-spacing: 0.04em;
+transition: background-color var(--taming-duration) var(--taming-cubic);
+}
+
+.btn-mode-header:hover,
+.btn-mode-header:focus{
+  background-color: var(--pressed-state);
 }
 
 /*------------------------------input footer---------------*/
