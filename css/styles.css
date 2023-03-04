@@ -780,7 +780,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 460px;
+  width: 408px;
   border-radius: 4px;
   background-color: var(--modal);
 }
@@ -934,23 +934,48 @@ textarea::placeholder {
   color: var(--subtle-text);
 }
 
-.check-input{
-  margin: 0;
-  width: 16px;
-  height: 16px;
-  border: 1.25px solid  rgba(46, 47, 66, 1);
-border-radius: 4px;
+.label-check{
+  display: flex;
+  width: 338px;
+font-weight: 400;
+font-size: 12px;
+line-height: 1.33;
+letter-spacing: 0.04em;
+color: rgba(117, 117, 117, 1);
 
 }
 
-.policy{color: var(--btn);}
+.label-check::before{
+  content: "";
+  width: 16px;
+  height: 16px;
+  border: 1.25px solid  var(--dark);
+border-radius: 2px;
+margin-right: 8px;
+}
+
+.check-input:checked + .label-check::before{
+  background-color: var(--pressed-state);
+  border: none;
+  background-image: url(../images/icons.svg/check-box.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.check-input:focus + .label-check::before{
+  background-color: var(--pressed-state);
+}
+
+
+.policy-link{color: var(--btn);
+margin-left: 2px;}
 
 .btn-mode-header{
+  margin-left: 90px;
   cursor: pointer;
   width: 169px;
   height: 56px;
   margin-top: 24px;
-  margin-left: 119px;
   color: var(--modal);
   background: var(--btn);
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
